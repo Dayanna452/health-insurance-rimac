@@ -1,15 +1,17 @@
 import { Suspense } from 'react'
-import { useRoutes } from 'react-router-dom'
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-import routes from '~react-pages'
+import { Route, Routes } from 'react-router-dom'
+import { routes } from './utils/routes'
 
 function App () {
-  // eslint-disable-next-line no-console
-  console.log(routes)
 
   return (
-        <Suspense fallback={<p>Loading...</p>}>{useRoutes(routes)}</Suspense>
+    <Suspense fallback={<p>Loading...</p>}>
+      <Routes>
+          {routes.map((route) => (
+            <Route key={route.path} path={route.path} element={<route.component />} />
+          ))}
+    </Routes>
+    </Suspense>
   )
 }
 
