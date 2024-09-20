@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import { BrowserRouter, Routes, useRoutes } from 'react-router-dom'
+import { useRoutes } from 'react-router-dom'
 import routes from '~react-pages'
 
 function App () {
