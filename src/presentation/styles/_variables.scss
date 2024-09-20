@@ -1,0 +1,28 @@
+// Variables de colores
+$colors: (
+  "primary": #ff1c44,
+  "dark": #03050f,
+  "white": #ffffff,
+);
+$text-color: map-get($colors, "dark");
+$background-color: #fafbff;
+
+// Tipografía
+$font-family-base: "Arial, sans-serif";
+$font-size-base: 16px;
+
+// Espaciado
+$spacer: 1rem;
+
+// Grid
+$grid-columns: 12;
+$grid-gutter: 16px; // espacio entre columnas
+$grid-container-width: 1200px;
+
+// Breakpoints
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+);
