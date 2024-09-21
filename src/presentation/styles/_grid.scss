@@ -1,5 +1,5 @@
 // Clases para columnas
-@for $i from 1 through 12 {
+@for $i from 1 through $grid-columns {
   .col-#{$i} {
     @include make-col($i);
   }
@@ -7,7 +7,7 @@
 
 // Clases responsivas para columnas
 @each $breakpoint, $value in $breakpoints {
-  @for $i from 1 through 12 {
+  @for $i from 1 through $grid-columns {
     .col-#{$breakpoint}-#{$i} {
       @include respond-to($breakpoint) {
         @include make-col($i);

@@ -1,8 +1,7 @@
+import { PlansLayout } from "../presentation/components/layouts/PlansLayout";
+
 const Plans = () => {
-  return (
-    <div>Plans</div>
-  )
-}
+  return <PlansLayout />;
+};
 
-
-export default Plans
+export default Plans;
