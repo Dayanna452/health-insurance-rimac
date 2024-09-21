@@ -1,0 +1,6 @@
+//Home
+
+.home__content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+}
