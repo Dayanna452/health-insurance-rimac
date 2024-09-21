@@ -3,18 +3,20 @@ import RimacLogo from "../../../../assets/images/rimac-logo.svg";
 
 export const Header: React.FC = () => {
   return (
-    <div className="header-container">
-      <Image
-        className="header-container__logo"
-        src={RimacLogo}
-        alt="rimac logo"
-      />
-      <div className="header-contact">
-        <h3 className="header-contact__info_optional">
-          ¡Compra por este medio!
-        </h3>
-        <h3>(01) 411 6001</h3>
+    <header className="container h-1.5">
+      <div className="d-flex justify-content-between align-items-center">
+        <Image
+          className="logo"
+          src={RimacLogo}
+          alt="rimac logo"
+          height={36}
+          width={73.19}
+        />
+        <div className="d-flex align-items-center gap-2">
+          <b>¡Compra por este medio!</b>
+          <h5>(01) 411 6001</h5>
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
