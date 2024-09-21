@@ -1,13 +1,14 @@
 import { FC } from "react";
 import { Header } from "../contents/Header";
-import { Footer } from "../contents/Footer";
+import { StepperPlans } from "../contents/StepperPlans";
 
 export const PlansLayout: FC = () => {
   return (
-    <>
+    <div className="template">
       <Header />
-      <main>hola</main>
-      <Footer />
-    </>
+      <main>
+        <StepperPlans />
+      </main>
+    </div>
   );
 };

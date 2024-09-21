@@ -8,11 +8,6 @@
   }
 }
 
-// Mixin para aplicar sombras
-@mixin box-shadow($x: 0, $y: 0, $blur: 10px, $color: rgba(0, 0, 0, 0.15)) {
-  box-shadow: $x $y $blur $color;
-}
-
 // Mixin para Flexbox
 @mixin flex-center($direction: row) {
   display: flex;
@@ -37,5 +32,60 @@
 }
 
 // Mixin para espaciado
-@mixin make-space($item) {
+@mixin generate-dimension-space($property) {
+  @for $i from 1 through 100 {
+    @if $property == "h" {
+      .#{$property}-#{$i} {
+        height: #{$i} + px;
+      }
+    }
+    @if $property == "w" {
+      .#{$property}-#{$i} {
+        width: #{$i} + px;
+      }
+    }
+  }
+}
+
+@mixin generate-box-space($property) {
+  @for $i from 0 through 100 {
+    @if $property == "p" {
+      .#{$property}-#{$i} {
+        padding: #{$i} + px;
+      }
+    } @else if $property == "px" {
+      .#{$property}-#{$i} {
+        padding-left: #{$i} + px;
+        padding-right: #{$i} + px;
+      }
+    } @else if $property == "py" {
+      .#{$property}-#{$i} {
+        padding-top: #{$i} + px;
+        padding-bottom: #{$i} + px;
+      }
+    }
+    @if $property == "m" {
+      .#{$property}-#{$i} {
+        margin: #{$i} + px;
+      }
+    } @else if $property == "mx" {
+      .#{$property}-#{$i} {
+        margin-left: #{$i} + px;
+        margin-right: #{$i} + px;
+      }
+    } @else if $property == "my" {
+      .#{$property}-#{$i} {
+        margin-top: #{$i} + px;
+        margin-bottom: #{$i} + px;
+      }
+    }
+  }
+}
+
+@mixin generate-gap-space() {
+  @for $i from 1 through 100 {
+    .gap-#{$i} {
+      gap: #{$i} + px;
+    }
+  }
 }

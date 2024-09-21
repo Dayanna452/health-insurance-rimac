@@ -4,13 +4,6 @@
 .my-auto {
   margin: auto 0;
 }
-.m-0 {
-  margin: 0;
-}
-
-.p-0 {
-  padding: 0;
-}
 
 .text-center {
   text-align: center;
@@ -23,6 +16,14 @@
   display: flex;
 }
 
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.d-none {
+  display: none;
+}
+
 .align-items-center {
   align-items: center;
 }
@@ -31,18 +32,30 @@
   justify-content: space-between;
 }
 
-.d-none {
-  display: none;
+.template {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
-@for $i from 1 through $grid-columns {
-  .gap-#{$i} {
-    @include make-gap($i);
-  }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@for $i from 1 through $grid-columns {
-  .h-#{$i} {
-    @include make-height($i);
-  }
+.inline-flex-center {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
+
+@include generate-gap-space();
+@include generate-dimension-space("h");
+@include generate-dimension-space("w");
+@include generate-box-space("p");
+@include generate-box-space("px");
+@include generate-box-space("py");
+@include generate-box-space("m");
+@include generate-box-space("mx");
+@include generate-box-space("my");

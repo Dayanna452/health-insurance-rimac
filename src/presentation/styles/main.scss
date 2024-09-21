@@ -11,7 +11,13 @@
 // BLOCKS
 @import "@/presentation/components/blocks/Button/styles/button.scss";
 @import "@/presentation/components/blocks/Input/styles/input.scss";
+@import "@/presentation/components/blocks/Stepper/styles/stepper.scss";
 
 // CONTENTS
 @import "@/presentation/components/contents/Header/styles/header.scss";
+@import "@/presentation/components/contents/Footer/styles/footer.scss";
 @import "@/presentation/components/contents/Wrapper/styles/wrapper.scss";
+@import "@/presentation/components/contents/StepperPlans/styles/stepperPlans.scss";
+
+// LAYOUTS
+@import "@/presentation/components/layouts/styles/index.scss";
