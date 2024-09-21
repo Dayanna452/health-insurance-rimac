@@ -7,6 +7,7 @@ export const HomeForm = () => {
     <form>
       <Input type='email' name='email' />
       <Checkbox />
+      <Checkbox />
       <Button>Submit</Button>
     </form>
   )
