@@ -33,7 +33,7 @@ export const HomeContent = () => {
             </div>
           </section>
           <section className='col-12 col-md-6 home-info__form'>
-            <div className='home-info col-6 col-md-12'>
+            <div className='home-info gap-16 col-6 col-md-12'>
               <Badge className='badge_gradient' text='Seguro Salud Flexible' />
               <p className='home__title'>Creado para ti y tu familia</p>
               <span>
