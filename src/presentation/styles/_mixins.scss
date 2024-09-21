@@ -1,5 +1,3 @@
-@import './variables.scss';
-
 // Mixin para Breakpoints
 @mixin respond-to($size) {
   @media (min-width: map-get($breakpoints, $size)) {

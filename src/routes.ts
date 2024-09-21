@@ -1,6 +1,6 @@
 import Home from "./pages";
-import Plans from "./pages/plans";
-import Resume from "./pages/resume";
+import Plans from "./pages/Plans";
+import Resume from "./pages/Resume";
 
 export const routes = [
   {
