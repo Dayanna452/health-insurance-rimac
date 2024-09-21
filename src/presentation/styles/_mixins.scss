@@ -1,7 +1,10 @@
 // Mixin para Breakpoints
-@mixin respond-to($size) {
-  @media (min-width: map-get($breakpoints, $size)) {
-    @content;
+@mixin respond-to($breakpoint) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+  @if $breakpoint-value != null {
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
   }
 }
 
@@ -19,7 +22,12 @@
 }
 
 // Mixin para columnas
-@mixin col($span, $columns: $grid-columns) {
-  flex: 0 0 (100% / $columns * $span);
-  max-width: (100% / $columns * $span);
+@mixin make-col($columns) {
+  width: calc($columns / $grid-columns * 100%);
+}
+
+// Mixin para gutters
+@mixin make-gutters {
+  padding-right: calc($grid-gutter-width / 2);
+  padding-left: calc($grid-gutter-width / 2);
 }

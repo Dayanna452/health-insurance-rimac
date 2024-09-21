@@ -10,7 +10,7 @@ $text-color: map-get($colors, "dark");
 $background-color: #fafbff;
 
 // Tipografía
-$font-family-base: "Open Sans","sans-serif";
+$font-family-base: "Open Sans", "sans-serif";
 $font-size-base: 16px;
 
 // Espaciado
@@ -18,17 +18,21 @@ $spacer: 1rem;
 
 // Grid
 $grid-columns: 12;
-$grid-gutter: 16px; // espacio entre columnas
-$grid-container-width: 1200px;
 
 // Breakpoints
 $breakpoints: (
-  "sm": 576px,
-  "md": 768px,
-  "lg": 992px,
-  "xl": 1200px,
-  "xl2": 1440px,
-  "xl3": 1950px,
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  2xl: 1440px,
+  3xl: 1950px,
 );
 
-
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+);

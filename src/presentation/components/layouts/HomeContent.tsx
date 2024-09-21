@@ -1,26 +1,17 @@
-import { Header } from '../contents/Header'
-import { Footer } from '../contents/Footer'
-import { Wrapper } from '../contents/Wrapper'
-import { Link } from 'react-router-dom'
-import HomePhoto from '../../../assets/images/home-photo.png'
-import { Button } from '../blocks/Button'
-import { Image } from '../blocks/Image'
-import { Badge } from '../blocks/Badge'
+import { Header } from "../contents/Header";
+import { Footer } from "../contents/Footer";
 
 export const HomeContent = () => {
   return (
-    <Wrapper blur>
+    <div>
       <Header />
-      <div className='home__content'>
-        <div className=''>
-          <Badge className='badge_gradient' text='Seguro Salud Flexible' />
-          <h2>Creado para ti y tu familia</h2>
-        </div>
-        <Image src={HomePhoto} alt='home photo' width={100} />
+      <div className="container">
+        <main className="row">
+          <section className="col-12 col-md-6">Image</section>
+          <section className="col-12 col-md-6">Form</section>
+        </main>
       </div>
-      <Link to={'/plans'}>Plans</Link>
-      <Button>Hola</Button>
       <Footer />
-    </Wrapper>
-  )
-}
+    </div>
+  );
+};
