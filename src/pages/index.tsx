@@ -1,13 +1,9 @@
-import { Link } from "react-router-dom";
-import { Button } from "../presentation/components/blocks/Button";
+//Components
+import { HomeContent } from "../presentation/components/layouts/HomeContent";
 
 const Home = () => {
   return (
-    <div>
-      Home
-      <Link to={"/plans"}>Plans</Link>
-      <Button>Hola</Button>
-    </div>
+    <HomeContent/>
   );
 };
 

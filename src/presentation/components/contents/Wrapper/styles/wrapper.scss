@@ -1,0 +1,59 @@
+// Import the mixin file and use the respond-to mixin in the following way:
+@import '../../../../styles/mixins';
+
+
+.wrapper-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  &__content {
+    max-height: 100%;
+  }
+}
+
+.left-blur {
+  /* blur-asset */
+  position: fixed;
+  width: 432px;
+  left:-10%;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+}
+
+.right-blur {
+  /* blur-asset */
+  position: fixed;
+  width: 432px;
+  right: -10%;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+}
+
+@include respond-to("lg") {
+  .left-blur {
+    left:-8%;
+  }
+  .right-blur {
+    right: -8%;
+  }
+}
+
+@include respond-to("xl2") {
+  .left-blur {
+    left:-5%;
+  }
+  .right-blur {
+    right: -5%;
+  }
+}
+
+@include respond-to("xl3") {
+  .left-blur {
+    left:0;
+  }
+  .right-blur {
+    right: 0;
+  }
+}
