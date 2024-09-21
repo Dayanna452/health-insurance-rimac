@@ -2,11 +2,12 @@
 $colors: (
   "primary": #ff1c44,
   "secondary": #2b304e,
+  "purple-light": #ccd1ee,
   "dark": #03050f,
   "white": #ffffff,
   "green-100": #00f4e2,
   "green-200": #00ff7f,
-  "purple-light": #edeffc,
+  "purple-grey": #edeffc,
   "purple-dark": #4f4fff,
   "purple-pastel": #7981b2,
   "purple-night": #141938,
@@ -15,7 +16,7 @@ $text-color: map-get($colors, "dark");
 $background-color: #fafbff;
 
 // Tipografía
-$font-family-base: "Open Sans", "sans-serif";
+$font-family-base: "Roboto", "Noto Sans", sans-serif;
 $font-size-base: 16px;
 
 // Espaciado
