@@ -1,4 +1,3 @@
-import './styles/badge.scss'
 
 interface BadgeProps {
   className?: string

@@ -1,3 +1,52 @@
-.input {
-  background-color: red;
+// Define variables for reusable values
+$input-border-color: #ccc;
+$input-focus-border-color: #3498db;
+$input-background: #f9f9f9;
+$input-text-color: #333;
+$input-error-color: #e74c3c;
+$input-padding: 10px;
+$input-border-radius: 4px;
+
+// Style the input
+input {
+  width: 100%;
+  padding: $input-padding;
+  border: 1px solid $input-border-color;
+  border-radius: $input-border-radius;
+  background-color: $input-background;
+  color: $input-text-color;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+
+  // Hover state
+  &:hover {
+    border-color: darken($input-border-color, 10%);
+  }
+
+  // Focus state
+  &:focus {
+    border-color: $input-focus-border-color;
+    box-shadow: 0 0 5px lighten($input-focus-border-color, 20%);
+  }
+
+  // Disabled state
+  &:disabled {
+    background-color: lighten($input-background, 20%);
+    border-color: lighten($input-border-color, 20%);
+    cursor: not-allowed;
+  }
+
+  // Error state
+  &.error {
+    border-color: $input-error-color;
+    background-color: lighten($input-error-color, 40%);
+    color: darken($input-error-color, 20%);
+  }
+
+  // Placeholder text
+  &::placeholder {
+    color: lighten($input-text-color, 30%);
+    opacity: 1; // Fix for older browsers
+  }
 }
