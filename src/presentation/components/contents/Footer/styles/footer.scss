@@ -25,3 +25,12 @@
     color: map-get($colors, "white");
   }
 }
+
+@include respond-to("md") {
+  .footer {
+    &__logo {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+  }
+}

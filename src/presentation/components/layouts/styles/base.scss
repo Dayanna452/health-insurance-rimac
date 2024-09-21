@@ -1,14 +1,22 @@
 //Home
-
-.home-container{
+.home-container {
   border-bottom: 1px solid map-get($colors, "purple-light");
 }
 
-.home-info_mobile{
-  display: flex;;
+.home-info {
+  display: none;
+  gap: 10px;
+  justify-content: space-between;
+  &__form {
+    padding: 0 0 0 10%;
+  }
+  &_mobile {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.home__title{
+.home__title {
   font-size: 28px;
   font-weight: 700;
 }
@@ -27,15 +35,23 @@
   }
 }
 
-@include respond-to("lg") {
-  .home-container{
+@include respond-to("md") {
+  .home-info {
+    display: flex;
+    flex-direction: column;
+    &_mobile {
+      display: none;
+    }
+  }
+  .home-container {
     border: none;
   }
-  .home-info_mobile{
-    display: none;
-  }
-  .home__image{
+
+  .home__image {
     width: 100%;
     height: 100%;
   }
+}
+
+@include respond-to("lg") {
 }

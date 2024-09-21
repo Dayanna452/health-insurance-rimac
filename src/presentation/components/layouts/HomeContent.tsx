@@ -10,8 +10,8 @@ export const HomeContent = () => {
   return (
     <Wrapper blur>
       <Header />
-      <div className='container'>
-        <main className='row '>
+      <div className='container wrapper-container__content'>
+        <main className='row'>
           <section className='col-12 col-md-6'>
             <div className='row home-container'>
               <div className='home-info_mobile col-6 col-md-12'>
@@ -32,7 +32,7 @@ export const HomeContent = () => {
               </div>
             </div>
           </section>
-          <section className='col-12 col-md-6'>
+          <section className='col-12 col-md-6 home-info__form'>
             <div className='home-info col-6 col-md-12'>
               <Badge className='badge_gradient' text='Seguro Salud Flexible' />
               <p className='home__title'>Creado para ti y tu familia</p>

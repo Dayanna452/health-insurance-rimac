@@ -1,5 +1,5 @@
 //Components
-import { useUserData } from "../data/stores/useUser";
+import { useUserData } from "../services/user";
 import { HomeContent } from "../presentation/components/layouts/HomeContent";
 
 const Home = () => {

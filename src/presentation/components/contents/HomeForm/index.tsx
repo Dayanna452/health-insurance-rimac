@@ -4,7 +4,7 @@ import { Input } from '../../blocks/Input'
 
 export const HomeForm = () => {
   return (
-    <form>
+    <form className='form'>
       <Input type='email' name='email' />
       <Input type='email' name='email' />
       <Checkbox />
