@@ -1,9 +1,10 @@
 import { Header } from "../contents/Header";
 import { Footer } from "../contents/Footer";
+import { Wrapper } from "../contents/Wrapper";
 
 export const HomeContent = () => {
   return (
-    <div>
+    <Wrapper  blur>
       <Header />
       <div className="container">
         <main className="row">
@@ -12,6 +13,6 @@ export const HomeContent = () => {
         </main>
       </div>
       <Footer />
-    </div>
+    </Wrapper>
   );
 };
