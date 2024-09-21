@@ -13,7 +13,7 @@ export const HomeContent = () => {
       <div className='container wrapper-container__content'>
         <main className='row'>
           <section className='col-12 col-md-6'>
-            <div className='row home-container'>
+            <div className='row align-items-center home-container'>
               <div className='home-info_mobile col-6 col-md-12'>
                 <Badge
                   className='badge_gradient'
