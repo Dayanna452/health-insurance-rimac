@@ -1,11 +1,11 @@
 import { FC } from "react";
 import { DashedLine } from "../../icons/DashedLine";
 
-interface StepsProps {
+interface SteperProps {
   steps: { title: string; active: boolean }[];
 }
 
-export const Stepper: FC<StepsProps> = ({ steps }) => {
+export const Stepper: FC<SteperProps> = ({ steps }) => {
   return (
     <div className="stepper-container d-flex gap-16">
       {steps.map((step, index) => (

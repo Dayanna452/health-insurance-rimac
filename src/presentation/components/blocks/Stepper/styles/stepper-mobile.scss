@@ -1,0 +1,13 @@
+.stepper-mobile-back {
+  &__icon {
+    font-size: 24px;
+    color: map-get($colors, "purple-pastel");
+  }
+
+  &__text {
+    font-size: 10px;
+    font-weight: 900;
+    line-height: 16px;
+    letter-spacing: 0.8px;
+  }
+}
