@@ -8,7 +8,11 @@ $input-padding: 10px;
 $input-border-radius: 4px;
 
 // Style the input
+.input-container {
+  height: 100%;
+}
 .input {
+  height: 100%;
   width: 100%;
   padding: $input-padding;
   border: 1px solid $input-border-color;
@@ -30,6 +34,7 @@ $input-border-radius: 4px;
     box-shadow: 0 0 5px lighten($input-focus-border-color, 20%);
   }
 
+  
   // Disabled state
   &:disabled {
     background-color: lighten($input-background, 20%);

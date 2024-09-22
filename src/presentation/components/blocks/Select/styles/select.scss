@@ -1,6 +1,38 @@
-.select-container{
-
-  &__input{
-    
+/* Estilo básico para el select */
+.select-container {
+  appearance: none; /* Elimina la apariencia predeterminada */
+  -webkit-appearance: none; /* Safari y Chrome */
+  -moz-appearance: none; /* Firefox */
+  background-color: #f1f1f1;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  /* background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNSAxMmwxLjYwNy0xLjYwNy0yLjg0NS0yLjg0NUwxLjA3LjY0bC0xLjYwNiAxLjYwNiAyLjg0NSAyLjg0NUw1IDExLjg1Nm0tLjAzLS45bC40NjEtLjQ2MXoiIGZpbGw9IiMyMjIiLz48L3N2Zz4=");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px; */
+  &:focus-visible {
+    outline: none;
   }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+.select-container option {
+  padding: 10px;
+  background-color: white;
+}
+
+.select-container:hover {
 }
