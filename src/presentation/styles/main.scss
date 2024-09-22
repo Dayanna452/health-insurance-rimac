@@ -11,7 +11,7 @@
 // BLOCKS
 @import "@/presentation/components/blocks/Button/styles/button.scss";
 @import "@/presentation/components/blocks/Input/styles/input.scss";
-@import "@/presentation/components/blocks/Stepper/styles/stepper.scss";
+@import "@/presentation/components/blocks/Stepper/styles/index.scss";
 @import "@/presentation/components/blocks/Badge/styles/badge.scss";
 @import "@/presentation/components/blocks/Checkbox/styles/checkbox.scss";
 
@@ -21,6 +21,7 @@
 @import "@/presentation/components/contents/Wrapper/styles/wrapper.scss";
 @import "@/presentation/components/contents/HomeForm/styles/homeform.scss";
 @import "@/presentation/components/contents/StepperPlans/styles/stepperPlans.scss";
+@import "@/presentation/components/contents/PlansOptions/styles/plansOptions.scss";
 
 // LAYOUTS
 @import "@/presentation/components/layouts/styles/index.scss";

@@ -63,6 +63,22 @@
         padding-top: #{$i} + px;
         padding-bottom: #{$i} + px;
       }
+    } @else if $property == "pt" {
+      .#{$property}-#{$i} {
+        padding-top: #{$i} + px;
+      }
+    } @else if $property == "pr" {
+      .#{$property}-#{$i} {
+        padding-right: #{$i} + px;
+      }
+    } @else if $property == "pb" {
+      .#{$property}-#{$i} {
+        padding-bottom: #{$i} + px;
+      }
+    } @else if $property == "pl" {
+      .#{$property}-#{$i} {
+        padding-left: #{$i} + px;
+      }
     }
     @if $property == "m" {
       .#{$property}-#{$i} {
@@ -77,6 +93,22 @@
       .#{$property}-#{$i} {
         margin-top: #{$i} + px;
         margin-bottom: #{$i} + px;
+      }
+    } @else if $property == "mt" {
+      .#{$property}-#{$i} {
+        margin-top: #{$i} + px;
+      }
+    } @else if $property == "mr" {
+      .#{$property}-#{$i} {
+        margin-right: #{$i} + px;
+      }
+    } @else if $property == "mb" {
+      .#{$property}-#{$i} {
+        margin-bottom: #{$i} + px;
+      }
+    } @else if $property == "ml" {
+      .#{$property}-#{$i} {
+        margin-left: #{$i} + px;
       }
     }
   }

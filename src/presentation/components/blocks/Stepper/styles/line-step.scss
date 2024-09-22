@@ -1,0 +1,23 @@
+.line-step__container {
+  width: 212px;
+  height: 6px;
+  border-radius: 20px;
+  background-color: map-get($colors, "purple-light");
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+
+  &::after {
+    content: "";
+    height: 100%;
+    width: 10px;
+    display: block;
+    background-color: map-get($colors, "purple-dark");
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+  }
+}
