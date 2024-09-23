@@ -1,38 +1,44 @@
-import { FC } from "react";
-import { GiCircle } from "react-icons/gi";
-import { FaCircleCheck } from "react-icons/fa6";
+import { FC, useMemo } from "react";
+import { Button } from "../Button";
+import { HomeLight } from "../../icons/HomeLight";
 
 interface PlanCardProps {
   title: string;
-  checked?: boolean;
-  icon: JSX.Element;
-  description: string;
-  onChecked?: (checked?: boolean) => void;
+  price: number;
+  descriptions: string[];
+  discount?: boolean;
 }
 
 export const PlanCard: FC<PlanCardProps> = ({
-  icon,
   title,
-  checked,
-  description,
-  onChecked,
+  price,
+  discount,
+  descriptions,
 }) => {
+  const newPrice = useMemo(() => price - price * 0.05, [price]);
+
   return (
-    <div className="plan-card" data-checked={checked}>
-      <div className="d-flex justify-content-end">
-        <i
-          className="plan-card-radio"
-          data-checked={checked}
-          onClick={() => onChecked?.(checked)}
-        >
-          {checked ? <FaCircleCheck /> : <GiCircle />}
+    <div className="plan-card d-flex flex-column">
+      <div className="plan-card__header">
+        <h3 className="header__title">{title}</h3>
+        <i className="header__icon">
+          <HomeLight />
         </i>
       </div>
-      <div className="plan-card-content mb-8">
-        <i className="plan-card-content__icon">{icon}</i>
-        <p className="plan-card-content__title">{title}</p>
-      </div>
-      <p className="plan-card__description">{description}</p>
+      <h6 className="subheader__text">COSTO DEL PLAN</h6>
+      {discount ? (
+        <span className="subheader__discount my-4">${price} antes</span>
+      ) : null}
+      <b className="subheader__price">${discount ? newPrice : price} al mes</b>
+      <hr className="plan-card__divider" />
+      <ul className="plan-card__descriptions d-flex flex-column gap-24">
+        {descriptions.map((description, index) => (
+          <li key={index}>{description}</li>
+        ))}
+      </ul>
+      <Button className="mt-auto" variant="contained" color="primary" fullWidth>
+        Seleccionar Plan
+      </Button>
     </div>
   );
 };

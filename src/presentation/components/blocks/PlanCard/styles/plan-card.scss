@@ -1,61 +1,72 @@
 .plan-card {
-  width: 336px;
+  width: 288px;
+  height: 662px;
   box-shadow: 0px 1px 32px 0px rgba(174, 172, 243, 0.35);
   background-color: map-get($colors, "white");
-  padding: 16px 24px 40px 24px;
+  padding: 40px 32px 48px 32px;
   border-radius: 24px;
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
   -ms-border-radius: 24px;
   -o-border-radius: 24px;
 
-  &[data-checked="true"] {
-    border: 3px solid rgba(20, 25, 56, 1);
-  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 16px;
 
-  &-radio {
-    font-size: 24px;
-    height: 24px;
-    width: 24px;
-    display: inline-block;
-
-    &[data-checked="true"] {
-      color: map-get($colors, "green-300");
-    }
-  }
-
-  &-content {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-
-    &__icon {
-      height: 32px;
-      width: 32px;
-      font-size: 32px;
-    }
-
-    &__title {
-      font-size: 20px;
+    .header__title {
+      font-size: 24px;
       font-weight: 900;
-      line-height: 28px;
+      line-height: 32px;
       letter-spacing: -0.2px;
     }
+
+    .header__icon {
+      height: 56px;
+      width: 56px;
+      font-size: 56px;
+    }
   }
 
-  &__description {
+  .subheader__text {
     font-size: 12px;
+    font-weight: 900;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+    color: map-get($colors, "purple-pastel");
+  }
+
+  .subheader__discount {
+    font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    letter-spacing: 0.2px;
+    letter-spacing: -0.2px;
+    color: map-get($colors, "purple-pastel");
+    text-decoration: line-through;
   }
 
-  @include respond-to(md) {
-    width: 256px;
+  .subheader__price {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+  }
 
-    &-content {
-      align-items: flex-start;
-      flex-direction: column;
+  &__divider {
+    border-color: map-get($colors, "purple-grey");
+    border-width: 1px;
+    margin: 24px 0;
+  }
+
+  &__descriptions {
+    list-style-position: inside;
+
+    & > li {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0.1px;
     }
   }
 }

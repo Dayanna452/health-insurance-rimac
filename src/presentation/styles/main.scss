@@ -16,6 +16,8 @@
 @import "@/presentation/components/blocks/Badge/styles/badge.scss";
 @import "@/presentation/components/blocks/Checkbox/styles/checkbox.scss";
 @import "@/presentation/components/blocks/PlanCard/styles/plan-card.scss";
+@import "@/presentation/components/blocks/ForWhoCard/styles/forwho-card.scss";
+@import "@/presentation/components/blocks/Carousel/styles/carousel.scss";
 
 // CONTENTS
 @import "@/presentation/components/contents/Header/styles/header.scss";
@@ -23,7 +25,7 @@
 @import "@/presentation/components/contents/Wrapper/styles/wrapper.scss";
 @import "@/presentation/components/contents/HomeForm/styles/homeform.scss";
 @import "@/presentation/components/contents/StepperPlans/styles/stepper-plans.scss";
-@import "@/presentation/components/contents/PlanOptions/styles/plan-options.scss";
+@import "@/presentation/components/contents/PlanOptions/styles/index.scss";
 @import "@/presentation/components/contents/InputDocument/styles/inputdocument.scss";
 @import "@/presentation/components/contents/SelectPlan/styles/select-plan.scss";
 

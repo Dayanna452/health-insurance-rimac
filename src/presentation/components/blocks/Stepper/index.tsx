@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import { DashedLine } from "../../icons/DashedLine";
 
 interface SteperProps {
@@ -9,9 +9,8 @@ export const Stepper: FC<SteperProps> = ({ steps }) => {
   return (
     <div className="stepper-container d-flex gap-16">
       {steps.map((step, index) => (
-        <>
+        <Fragment key={`stepper-${index}`}>
           <div
-            key={index}
             className="stepper inline-flex-center gap-16"
             data-active={step.active}
           >
@@ -21,7 +20,7 @@ export const Stepper: FC<SteperProps> = ({ steps }) => {
             <span className="stepper__text">{step.title}</span>
           </div>
           <DashedLine />
-        </>
+        </Fragment>
       ))}
     </div>
   );

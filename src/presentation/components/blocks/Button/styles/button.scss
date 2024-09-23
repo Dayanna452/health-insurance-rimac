@@ -57,5 +57,9 @@
     &[data-size="lg"] {
       padding: 20px 40px;
     }
+
+    &[data-full-width="true"] {
+      width: 100%;
+    }
   }
 }

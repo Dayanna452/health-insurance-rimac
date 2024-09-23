@@ -3,6 +3,7 @@ import { IoChevronBackCircleOutline } from "react-icons/io5";
 
 import { SelectPlan } from "../SelectPlan";
 import { Button } from "../../blocks/Button";
+import { Plans } from "./parts/Plans";
 
 export const PlanOptions = () => {
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ export const PlanOptions = () => {
         </p>
       </div>
       <SelectPlan />
+      <Plans />
     </section>
   );
 };

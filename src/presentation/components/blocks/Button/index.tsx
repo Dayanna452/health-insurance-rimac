@@ -1,16 +1,19 @@
 import { ButtonHTMLAttributes, FC } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  startIcon?: JSX.Element;
+  fullWidth?: boolean;
   endIcon?: JSX.Element;
+  startIcon?: JSX.Element;
+  size?: "md" | "lg" | "xl";
   variant?: "text" | "contained";
   color?: "primary" | "purple-dark" | "dark";
-  size?: "md" | "lg" | "xl";
 }
 
 export const Button: FC<ButtonProps> = ({
   endIcon,
   children,
+  fullWidth,
+  className,
   startIcon,
   size = "md",
   color = "primary",
@@ -19,10 +22,11 @@ export const Button: FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className="button__container flex-center gap-8"
-      data-variant={variant}
-      data-color={color}
       data-size={size}
+      data-color={color}
+      data-variant={variant}
+      data-full-width={fullWidth}
+      className={`button__container flex-center gap-8 ${className}`}
       {...restProps}
     >
       {startIcon}
