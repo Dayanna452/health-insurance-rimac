@@ -1,4 +1,3 @@
-import { Image } from "../../blocks/Image/index";
 import RimacLogo from "../../../../assets/images/rimac-logo.svg";
 import { Telephone } from "../../icons/Telephone";
 
@@ -6,8 +5,8 @@ export const Header: React.FC = () => {
   return (
     <header>
       <div className="container py-14 d-flex justify-content-between align-items-center">
-        <Image
-          className="logo"
+        <img
+          className="header__logo"
           src={RimacLogo}
           alt="rimac logo"
           height={36}

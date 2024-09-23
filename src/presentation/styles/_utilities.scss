@@ -32,6 +32,14 @@
   justify-content: space-between;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
 .template {
   display: grid;
   grid-template-rows: auto 1fr auto;
