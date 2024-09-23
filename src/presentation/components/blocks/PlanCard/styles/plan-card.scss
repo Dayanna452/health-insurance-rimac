@@ -5,10 +5,6 @@
   background-color: map-get($colors, "white");
   padding: 40px 32px 48px 32px;
   border-radius: 24px;
-  -webkit-border-radius: 24px;
-  -moz-border-radius: 24px;
-  -ms-border-radius: 24px;
-  -o-border-radius: 24px;
 
   &__header {
     display: flex;

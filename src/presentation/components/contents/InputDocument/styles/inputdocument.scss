@@ -1,10 +1,6 @@
 .document-container {
   border-radius: 8px;
   border: 1px solid map-get($colors, "dark-50");
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
   .select-container{
     border-right: 1px solid map-get($colors, "dark-50");
   }
