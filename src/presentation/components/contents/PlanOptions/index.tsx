@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
+
+import { SelectPlan } from "../SelectPlan";
 import { Button } from "../../blocks/Button";
 
 export const PlanOptions = () => {
@@ -25,6 +27,7 @@ export const PlanOptions = () => {
           Selecciona la opción que se ajuste más a tus necesidades.
         </p>
       </div>
+      <SelectPlan />
     </section>
   );
 };
