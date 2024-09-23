@@ -4,12 +4,13 @@
   font-family: Arial, sans-serif;
 
   &__button {
-    border-radius: 8px;
-    padding: 16px;
+    border-radius: 8px 0 0 8px;
+    padding: 22px 16px;
     color: map-get($colors, "dark");
     cursor: pointer;
-    &:hover {
-      background-color: map-get($colors, "purple-grey");
+    &:active {
+      border-color: map-get($colors, "light-blue");
+      box-shadow: 0 0 5px lighten(map-get($colors, "light-blue"), 20%);
     }
   }
 }
@@ -42,5 +43,5 @@
 }
 
 .select-list li:hover {
-  background-color: #f1f1f1;
+  background-color: map-get($colors, "gray-50");
 }

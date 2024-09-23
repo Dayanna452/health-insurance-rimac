@@ -13,7 +13,7 @@ export const InputDocument = () => {
         <Select options={options} />
       </div>
       <div className='col-6 col-lg-7'>
-        <Input type='email' name='email' />
+        <Input className='input_simple' label='Nro. de documento' type='document' name='document' />
       </div>
     </div>
   )

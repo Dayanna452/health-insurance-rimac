@@ -1,40 +1,35 @@
-// Define variables for reusable values
-$input-border-color: #ccc;
-$input-focus-border-color: #3498db;
-$input-background: #f9f9f9;
-$input-text-color: #333;
-$input-error-color: #e74c3c;
-$input-padding: 10px;
-$input-border-radius: 4px;
-
 // Style the input
 .input-container {
   height: 100%;
+  position: relative;
 }
 .input {
   height: 100%;
   width: 100%;
-  padding: $input-padding;
-  border: 1px solid $input-border-color;
-  border-radius: $input-border-radius;
-  background-color: $input-background;
+  padding: 25px 16px 10px;
+  border-radius: 8px;
+  border: 1px solid map-get($colors, "dark-50");
   color: $input-text-color;
   font-size: 16px;
   outline: none;
   transition: border-color 0.3s ease;
 
-  // Hover state
+  &_simple {
+    border: none;
+    border-radius: 0 8px 8px 0;
+  }
+
+  //Hover state
   &:hover {
     border-color: darken($input-border-color, 10%);
   }
 
   // Focus state
   &:focus {
-    border-color: $input-focus-border-color;
-    box-shadow: 0 0 5px lighten($input-focus-border-color, 20%);
+    border-color: map-get($colors, "light-blue");
+    box-shadow: 0 0 5px lighten(map-get($colors, "light-blue"), 20%);
   }
 
-  
   // Disabled state
   &:disabled {
     background-color: lighten($input-background, 20%);
@@ -54,4 +49,14 @@ $input-border-radius: 4px;
     color: lighten($input-text-color, 30%);
     opacity: 1; // Fix for older browsers
   }
+}
+
+.input-container .input-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
+  color: map-get($colors, "dark-50");
+  pointer-events: none;
+  transition: 0.3s ease all;
 }

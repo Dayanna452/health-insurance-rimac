@@ -6,11 +6,15 @@ interface InputContainerProps
 export const Input = ({ label, className, ...props }: InputContainerProps) => {
   return (
     <div className='input-container' {...props}>
-      {label && <label htmlFor=''></label>}
       <input
         className={`input ${className ? className : ''}`}
         type={props.type}
       />
+      {label && (
+        <label className='input-label' htmlFor=''>
+          {label}
+        </label>
+      )}
     </div>
   )
 }
