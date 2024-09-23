@@ -21,8 +21,8 @@
 
 input[type="checkbox"] {
   position: relative;
-  width: 1.5em;
-  height: 1.5em;
+  width: 20px;
+  height: 20px;
   color: map-get($colors, "black");
   border: 1px solid map-get($colors, "gray-100");
   border-radius: 4px;
@@ -58,5 +58,7 @@ input[type="checkbox"] {
 }
 
 .checkbox-label {
+  max-width: 85%;
   width: fit-content;
+  font-size: 14px;
 }

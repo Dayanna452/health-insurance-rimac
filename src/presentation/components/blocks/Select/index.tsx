@@ -1,21 +1,23 @@
 import { useState } from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
+import { ValueLabel } from './types/select'
 
-interface ValueLabel {
-  value: string
-  label: string
-}
 interface SelectProps {
   options: ValueLabel[]
+  selectOption: ValueLabel
+  onChangeSelect: (option: ValueLabel) => void
 }
 
-export const Select = ({ options }: SelectProps) => {
+export const Select = ({
+  options,
+  selectOption = options[0],
+  onChangeSelect
+}: SelectProps) => {
   const [openSelect, setOpenSelect] = useState(false)
-  const [selectOption, setSelectOption] = useState<ValueLabel>(options[0])
 
   const handleToggle = () => setOpenSelect(!openSelect)
   const handleOptionClick = (option: ValueLabel) => {
-    setSelectOption(option)
+    onChangeSelect(option)
     setOpenSelect(false)
   }
 
