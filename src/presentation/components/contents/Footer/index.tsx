@@ -1,15 +1,21 @@
 import { FC } from "react";
 
-import { Image } from "../../blocks/Image";
-import LogoWhite from "../../../../assets/images/rimac-black-white.svg";
-
 export const Footer: FC = () => {
   return (
-    <div className="footer">
-      <div className="footer__logo">
-        <Image src={LogoWhite} alt="footer logo" />
+    <div className="footer-container">
+      <div className="footer-content container">
+        <img
+          src="/images/rimac-black-white.svg"
+          alt="rimac-black-white"
+          width={138}
+          height={20}
+          className="footer-content__logo"
+        />
+        <hr className="footer-content__divider" />
+        <p className="footer-content__copyright">
+          © 2023 RIMAC Seguros y Reaseguros.
+        </p>
       </div>
-      <p className="footer__copyright">© 2023 RIMAC Seguros y Reaseguros.</p>
     </div>
   );
 };
