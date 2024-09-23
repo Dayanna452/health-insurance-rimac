@@ -15,6 +15,7 @@ export const Button: FC<ButtonProps> = ({
   size = "md",
   color = "primary",
   variant = "contained",
+  ...restProps
 }) => {
   return (
     <button
@@ -22,6 +23,7 @@ export const Button: FC<ButtonProps> = ({
       data-variant={variant}
       data-color={color}
       data-size={size}
+      {...restProps}
     >
       {startIcon}
       {children}

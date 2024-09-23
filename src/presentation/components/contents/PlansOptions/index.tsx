@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
 import { Button } from "../../blocks/Button";
 
