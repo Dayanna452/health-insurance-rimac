@@ -9,12 +9,12 @@ const steps = [
 export const StepperPlans = () => {
   return (
     <>
-      <div className="stepper__section">
+      <section className="stepper__section">
         <Stepper steps={steps} />
-      </div>
-      <div className="container stepper__section-mobile">
-        <StepperMobile steps={steps} />
-      </div>
+      </section>
+      <section className="container stepper__section-mobile">
+        <StepperMobile />
+      </section>
     </>
   );
 };
