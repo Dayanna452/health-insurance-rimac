@@ -8,8 +8,7 @@ interface CarouselProps {
 }
 
 export const Carousel: FC<CarouselProps> = ({ slides, options }) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const [emblaRef] = useEmblaCarousel(options);
   return (
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
