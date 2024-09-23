@@ -27,6 +27,7 @@ a {
 button {
   font-family: inherit;
   cursor: pointer;
-  background-color: map-get($colors, "primary");
-  color: map-get($colors, "white");
+  background-color: transparent;
+  border: none;
+  color: inherit;
 }
