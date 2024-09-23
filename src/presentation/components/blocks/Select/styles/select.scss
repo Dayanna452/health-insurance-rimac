@@ -10,7 +10,8 @@
     cursor: pointer;
     &:active {
       border-color: map-get($colors, "light-blue");
-      box-shadow: 0 0 5px lighten(map-get($colors, "light-blue"), 20%);
+      //box-shadow: 0 0 5px lighten(map-get($colors, "light-blue"), 20%);
+      box-shadow: 0px 1px 32px 0px rgba(174, 172, 243, 0.35);
     }
   }
 }
@@ -28,7 +29,8 @@
   max-height: 150px;
   overflow-y: auto;
   z-index: 100;
-  box-shadow: 2px 4px 2px 2px #00000040;
+  box-shadow: 2px 4px 2px 2px rgba(174, 172, 243, 0.35);
+  //box-shadow: 0px 1px 32px 0px rgba(174, 172, 243, 0.35);
 
   &_hidden {
     display: none;

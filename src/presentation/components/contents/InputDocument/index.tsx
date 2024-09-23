@@ -28,7 +28,7 @@ export const InputDocument = ({
         <Input
           className='input_simple'
           label='Nro. de documento'
-          type='document'
+          type='number'
           name='document'
           onChange={onChangeDocument}
         />

@@ -26,8 +26,6 @@ export const HomeForm = () => {
     userData.privacy &&
     userData.conditions
 
-    console.log('userData', userData)
-
   // Manejar el envío del formulario
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -47,7 +45,7 @@ export const HomeForm = () => {
       <InputDocument
         options={options}
         selectOption={selectOption}
-        onChangeDocument={(e: React.ChangeEvent<HTMLInputElement>) => setUserData({ ...userData, document: selectOption.value })}
+        onChangeDocument={(e: React.ChangeEvent<HTMLInputElement>) => setUserData({ ...userData, document: e.target.value })}
         onChangeSelect={() => {
           setSelectOption(selectOption)
           setUserData({ ...userData, typeDocument: selectOption.value })
@@ -58,7 +56,7 @@ export const HomeForm = () => {
         label='Celular'
         name='phoneNumber'
         value={userData.phoneNumber}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserData({ ...userData, phoneNumber: selectOption.value })}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserData({ ...userData, phoneNumber: e.target.value })}
       />
       <div className='d-flex flex-column gap-10'>
         <Checkbox

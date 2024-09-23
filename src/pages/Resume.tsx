@@ -1,8 +1,7 @@
+import { ResumeContent } from '../presentation/components/layouts/ResumeContent'
 
 const Resume = () => {
-  return (
-    <div>Resume</div>
-  )
+  return <ResumeContent />
 }
 
 export default Resume

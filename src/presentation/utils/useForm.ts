@@ -1,6 +1,3 @@
-export const useForm = (data) => {
-  if(data){
-    data.preventDefault();
-  }
+export const useForm = () => {
   return {};
 };
