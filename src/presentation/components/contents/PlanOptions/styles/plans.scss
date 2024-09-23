@@ -1,5 +1,5 @@
 .plans {
-  margin-top: 40px;
+  margin: 40px 0;
 
   &__carousel {
     display: block;
@@ -14,7 +14,7 @@
     display: none;
   }
 
-  @include respond-to(md) {
+  @include respond-to(lg) {
     &__carousel {
       display: none;
     }
