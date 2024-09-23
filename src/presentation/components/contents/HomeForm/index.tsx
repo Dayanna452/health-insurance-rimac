@@ -10,7 +10,7 @@ export const HomeForm = () => {
       <Input />
       <Checkbox text='Acepto lo Política de Privacidad' />
       <Checkbox text='Acepto la Política Comunicaciones Comerciales' />
-      <Button>Submit</Button>
+      <Button color='dark'>Cotiza Aquí</Button>
     </form>
   )
 }

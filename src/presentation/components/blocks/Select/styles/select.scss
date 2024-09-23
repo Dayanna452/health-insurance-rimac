@@ -1,41 +1,46 @@
-/* Estilo básico para el select */
 .select-container {
-  height: 100%;
-  appearance: none; /* Elimina la apariencia predeterminada */
-  -webkit-appearance: none; /* Safari y Chrome */
-  -moz-appearance: none; /* Firefox */
-  background-color: #f1f1f1;
-  border: none;
-  font-size: 16px;
+  position: relative;
   width: 100%;
-  cursor: pointer;
-  outline: none;
-  /* background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNSAxMmwxLjYwNy0xLjYwNy0yLjg0NS0yLjg0NUwxLjA3LjY0bC0xLjYwNiAxLjYwNiAyLjg0NSAyLjg0NUw1IDExLjg1Nm0tLjAzLS45bC40NjEtLjQ2MXoiIGZpbGw9IiMyMjIiLz48L3N2Zz4=");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  background-size: 10px; */
+  font-family: Arial, sans-serif;
 
-  &__input {
-    padding: 10px;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    border: none;
-    &:focus-visible {
-      outline: none;
-    }
-    &:-moz-focusring {
-      color: transparent;
-      text-shadow: 0 0 0 #000;
-      border: none;
+  &__button {
+    border-radius: 8px;
+    padding: 16px;
+    color: map-get($colors, "dark");
+    cursor: pointer;
+    &:hover {
+      background-color: map-get($colors, "purple-grey");
     }
   }
 }
 
-.select-container option {
-  padding: 10px;
-  border: none;
+.select-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: map-get($colors, "white");
+  border-radius: 5px;
+  margin-top: 5px;
+  list-style: none;
+  padding: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 2px 4px 2px 2px #00000040;
+
+  &_hidden {
+    display: none;
+  }
 }
 
-.select-container:hover {
+.select-list li {
+  padding: 10px;
+  cursor: pointer;
+  background-color: map-get($colors, "white");
+  transition: background-color 0.3s;
+}
+
+.select-list li:hover {
+  background-color: #f1f1f1;
 }
