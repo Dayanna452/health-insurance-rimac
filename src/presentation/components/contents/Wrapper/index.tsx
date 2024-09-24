@@ -8,10 +8,10 @@ interface WrapperProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const Wrapper = ({ children, blur, ...props }: WrapperProps) => {
   return (
-    <div className={`wrapper-container ${props.className}`} {...props}>
+    <main className={`wrapper-container ${props.className}`} {...props}>
       {blur && <img className="left-blur" src={LeftBlur} alt="no hay blur" />}
       {children}
       {blur && <img className="right-blur" src={RightBlur} alt="no hay blur" />}
-    </div>
+    </main>
   );
 };

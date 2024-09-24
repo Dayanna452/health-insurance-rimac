@@ -12,7 +12,8 @@ $input-border-radius: 8px;
 $colors: (
   "primary": #ff1c44,
   "secondary": #2b304e,
-  "purple-light": #ccd1ee,
+  "purple-100": #ccd1ee,
+  "purple-200":#D7DBF5,
   "dark": #03050f,
   "dark-50": #5E6488,
   "dark-100": #0a051e,
@@ -31,7 +32,7 @@ $text-color: map-get($colors, "dark");
 $background-color: #fafbff;
 
 // Tipografía
-$font-family-base: "Roboto", "Noto Sans", sans-serif;
+$font-family-base: "Lato", "Noto Sans", sans-serif;
 $font-size-base: 16px;
 
 // Espaciado

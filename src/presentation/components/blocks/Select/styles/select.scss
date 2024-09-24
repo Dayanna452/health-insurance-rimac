@@ -1,7 +1,7 @@
 .select-container {
   position: relative;
   width: 100%;
-  font-family: Arial, sans-serif;
+  font-family: $font-family-base;
 
   &__button {
     border-radius: 8px 0 0 8px;
