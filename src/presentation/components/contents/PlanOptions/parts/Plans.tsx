@@ -10,7 +10,7 @@ const OPTIONS: EmblaOptionsType = {};
 export const Plans = () => {
   const { data } = usePlansData();
   const plansData = data?.list ?? [];
-  const { selectedPlan } = usePlan();
+  const { selectedForWhoPlan: selectedPlan } = usePlan();
 
   const planSlides = plansData.map((plan, index) => (
     <div key={`plan-item-${index}`} className="plan-item">
