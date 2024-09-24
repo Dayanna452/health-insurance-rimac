@@ -1,22 +1,25 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
+import { useUserData } from '../../../../services/user'
+
+import { Input } from '../../blocks/Input'
 import { Button } from '../../blocks/Button'
 import { Checkbox } from '../../blocks/Checkbox'
-import { Input } from '../../blocks/Input'
-import { InputDocument } from '../InputDocument'
-import { UserData } from '../../../types/user'
-import { UserInit } from '../../../../data/constants/data'
 import { ValueLabel } from '../../blocks/Select/types/select'
-import { useNavigate } from 'react-router-dom'
+
+import { InputDocument } from '../InputDocument'
+
+import { useUser } from '../../../../data/stores/useUser'
+import { options } from '../../../../data/constants/data'
+
 
 export const HomeForm = () => {
   const navigate = useNavigate()
-  const options = [
-    { value: 'dni', label: 'DNI' },
-    { value: 'pasaporte', label: 'Pasaporte' }
-  ]
-  const [selectOption, setSelectOption] = useState<ValueLabel>(options[0])
-  const [userData, setUserData] = useState<UserData>(UserInit)
+  const { data } = useUserData()
+  const { userData, setUserData, setUser } = useUser()
   const [formError, setFormError] = useState<string | null>(null)
+  const [selectOption, setSelectOption] = useState<ValueLabel>(options[0])
 
   // Verificar si todos los campos están completos
   const isFormComplete: boolean =
@@ -32,9 +35,9 @@ export const HomeForm = () => {
 
     if (isFormComplete) {
       navigate('/plans')
+      setUser(data)
       setFormError(null)
     } else {
-      // Si faltan campos, muestra un error
       console.log('formError', formError)
       setFormError('Por favor, completa todos los campos.')
     }
@@ -45,18 +48,22 @@ export const HomeForm = () => {
       <InputDocument
         options={options}
         selectOption={selectOption}
-        onChangeDocument={(e: React.ChangeEvent<HTMLInputElement>) => setUserData({ ...userData, document: e.target.value })}
+        onChangeDocument={(e: React.ChangeEvent<HTMLInputElement>) =>
+          setUserData({ ...userData, document: e.target.value })
+        }
         onChangeSelect={() => {
           setSelectOption(selectOption)
           setUserData({ ...userData, typeDocument: selectOption.value })
         }}
       />
       <Input
-      type='number'
+        type='number'
         label='Celular'
         name='phoneNumber'
         value={userData.phoneNumber}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserData({ ...userData, phoneNumber: e.target.value })}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          setUserData({ ...userData, phoneNumber: e.target.value })
+        }
       />
       <div className='d-flex flex-column gap-10'>
         <Checkbox

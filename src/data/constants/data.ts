@@ -5,3 +5,8 @@ export const UserInit = {
   privacy: false,
   conditions: false
 }
+
+export const options = [
+  { value: 'dni', label: 'DNI' },
+  { value: 'pasaporte', label: 'Pasaporte' }
+]

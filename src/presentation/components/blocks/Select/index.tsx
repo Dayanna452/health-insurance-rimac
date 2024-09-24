@@ -17,7 +17,10 @@ export const Select = ({
 
   const handleToggle = () => setOpenSelect(!openSelect)
   const handleOptionClick = (option: ValueLabel) => {
+    console.log('option', option)
     onChangeSelect(option)
+    console.log('option select', selectOption)
+
     setOpenSelect(false)
   }
 
