@@ -16,8 +16,6 @@ export const Plans = () => {
   const plansData = data?.list ?? [];
   const { selectedForWhoPlan, setSelectedPlan } = usePlan();
 
-  console.log(isTablet);
-
   const planSlides = plansData.map((plan, index) => (
     <div key={`plan-item-${index}`} className="plan-item">
       <PlanCard
