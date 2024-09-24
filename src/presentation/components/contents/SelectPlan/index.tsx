@@ -3,7 +3,10 @@ import { ForWhoCard } from "../../blocks/ForWhoCard";
 import { ProtectionLight } from "../../icons/ProtectionLight";
 
 export const SelectPlan = () => {
-  const { setSelectedPlan, selectedPlan } = usePlan();
+  const {
+    setSelectedForWhoPlan: setSelectedPlan,
+    selectedForWhoPlan: selectedPlan,
+  } = usePlan();
   return (
     <div className="select-plan">
       <ForWhoCard
